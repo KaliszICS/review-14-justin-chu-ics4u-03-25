@@ -1,7 +1,5 @@
 public class PracticeProblem {
 
-	private static final int MAXIMUM_VALUE = 15;
-
 	public static void main(String args[]) {
 
 	}
@@ -21,16 +19,15 @@ public class PracticeProblem {
 			case'^':
 				return (int) Math.pow(num1, num2);
 		}
-        return num1; //random return lol
+		return -1;
     }
 
-	public static boolean totalWordsChecker(String str) {
-		if (str == null || str.trim().isEmpty()) {
-			return true;
-		}
+	final static int MAXIMUM = 10;
 
-		String[] words = str.trim().split("\\s+");
-		return words.length <= MAXIMUM_VALUE;
+	public static boolean totalWordsChecker(String str) {
+
+		String[] words = str.trim().split("[^A-Za-z'_]+");
+		return words.length <= MAXIMUM;
     }
 
 	public static String minString(String str1, String str2, String str3) {
